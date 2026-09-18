@@ -1864,7 +1864,7 @@ Aktivnost na otvorenom: True
 
 </details>
 
-# Pokazni primjer: obrada rezultata studenta
+# Primjer: obrada rezultata studenta
 
 Dosad smo pojedine postupke učili odvojeno: uređivali smo tekst, pretvarali tipove podataka, računali, uspoređivali vrijednosti i oblikovali ispis. U stvarnom programu ti se koraci najčešće nadovezuju jedan na drugi. Sirovi podatak prvo pripremamo, zatim ga pretvaramo u odgovarajući tip, provodimo izračun ili provjeru i na kraju prikazujemo rezultat.
 
@@ -1874,14 +1874,27 @@ Sljedeći primjer povezuje gradivo prethodnih poglavlja u jedan cjelovit postupa
 
 **Zadatak:** obradite rezultat jednog studenta. Ime i grupa imaju neujednačen zapis, a bodovi su primljeni kao tekst. Izračunajte prosjek i provjerite je li student ostvario prosjek od najmanje 60 bodova uz najmanje tri dolaska.
 
+**Izvorni zapis studenta:**
+
+| Podatak | Zapisana vrijednost |
+|---|---|
+| Ime | `"  Ana Anić  "` |
+| Grupa | `" a "` |
+| Bodovi na prvom zadatku | `"78"` |
+| Bodovi na drugom zadatku | `"84"` |
+| Broj dolazaka | `4` |
+
 **Postupak:**
 
 1. Zapišite izvorne vrijednosti u zasebne varijable
 2. Uklonite rubne razmake iz imena i ujednačite oznaku grupe
 3. Pretvorite bodove u cijele brojeve
 4. Izračunajte prosjek dvaju zadataka
-5. Izračunajte logički rezultat zadanog uvjeta
+5. Uvjet za upis ocjene je prosjek zadataka veći od 50% te 3 ili više dolazaka. Je li uvjet zadovoljen?
 6. Izradite čitljiv ispis s prosjekom na dvije decimale.
+
+<details>
+<summary>Prikaži kod, očekivani izvještaj i objašnjenje</summary>
 
 ```python
 izvorno_ime = "  Ana Anić  "
@@ -1904,9 +1917,6 @@ print(f"Prosjek: {prosjek:.2f}")
 print(f"Uvjet zadovoljen: {uvjet_zadovoljen}")
 ```
 
-<details>
-<summary>Prikaži očekivani izvještaj</summary>
-
 ```text
 Student: Ana Anić
 Grupa: A
@@ -1918,34 +1928,18 @@ Izvorne vrijednosti ostaju dostupne za provjeru. Čišćenje stvara nove tekstov
 
 </details>
 
-## Zadatak: provjera različitih ulaznih vrijednosti
-
-Pokretanje jednog uspješnog primjera nije dovoljno da bismo zaključili da razumijemo postupak. Posebno su korisne vrijednosti na granici uvjeta.
-
-**Postupak:**
-
-1. Sačuvajte pokazni program u svojoj datoteci
-2. Promijenite izvorne bodove na `"60"` i `"60"`, a dolaske na 3
-3. Ponovno pokrenite program i provjerite prosjek i uvjet
-4. Zatim promijenite dolaske na 2 i ponovno pokrenite program
-5. Usporedite koji se dio izvještaja promijenio.
-
-<details>
-<summary>Prikaži očekivane promjene</summary>
-
-Uz bodove 60 i 60 te tri dolaska prosjek je `60.00`, a uvjet `True`. Uz iste bodove i dva dolaska prosjek ostaje `60.00`, ali uvjet postaje `False`.
-
-</details>
 
 # Čitanje pogrešaka i provjera programa
 
-Pogreške su očekivan dio razvoja programa. Neke Python može odmah prepoznati i opisati porukom pogreške, primjerice neispravan zapis naredbe ili pokušaj zbrajanja nepodržanih tipova. Druge ne zaustavljaju izvođenje: program se izvrši, ali zbog pogrešno postavljenog izraza ili pogrešne pretpostavke daje netočan rezultat.
+Pogreške su očekivan dio razvoja programa. **Sintaksne pogreške** nastaju kada kod nije zapisan prema pravilima jezika, primjerice kada nedostaje navodnik ili zagrada. Python ih prepoznaje prije pravilnog izvođenja programa. **Pogreške tijekom izvođenja** nastaju u sintaksno ispravnom programu kada Python naiđe na operaciju koju ne može izvršiti, primjerice zbrajanje nepodržanih tipova ili dijeljenje nulom. Obje vrste zaustavljaju program i Python ih opisuje porukom pogreške.
+
+**Logičke pogreške** ne moraju zaustaviti izvođenje. Program se izvrši bez poruke pogreške, ali zbog pogrešno postavljenog izraza ili pogrešne pretpostavke daje netočan rezultat. Zato izostanak poruke pogreške ne znači nužno da je program ispravan.
 
 Cilj nije pamtiti svaku moguću poruku, nego naučiti sustavno pronaći mjesto problema, prepoznati vrste uključenih vrijednosti i provjeriti odgovara li dobiveni rezultat zadatku koji rješavamo.
 
 ## Vrste pogrešaka i čitanje poruka pogreške
 
-Poruka pogreške opisuje problem na koji je Python naišao. Pri čitanju ispisa najprije pogledajte posljednji redak s vrstom i opisom pogreške, a zatim broj retka u svojoj datoteci. Mjesto na kojem je problem otkriven ne mora uvijek biti mjesto gdje ste ga uzrokovali; primjerice, nezatvoren navodnik ili zagrada može utjecati na sljedeće retke.
+Poruka pogreške opisuje problem na koji je Python naišao. Pri čitanju ispisa najprije pogledajte posljednji redak s vrstom i opisom pogreške, a zatim broj retka u svojoj datoteci. Mjesto na kojem je problem otkriven ne mora uvijek biti mjesto gdje ste ga uzrokovali na primjer, nezatvoren navodnik ili zagrada može utjecati na sljedeće retke.
 
 | Vrsta | Tipičan uzrok u ovoj vježbi |
 |---|---|
@@ -1960,7 +1954,7 @@ Točan tekst poruke može se razlikovati među verzijama Pythona. Važno je razu
 
 ## Ispravljanje pogreške pri zbrajanju teksta i broja
 
-Pri ispravljanju programa najprije trebamo utvrditi što smo željeli postići. Isti operator može imati različito značenje za različite tipove podataka, pa nije dovoljno samo ukloniti poruku pogreške; ispravak mora dati i smislen rezultat.
+Pri ispravljanju programa najprije trebamo utvrditi što smo željeli postići. Isti operator može imati različito značenje za različite tipove podataka, pa nije dovoljno samo ukloniti poruku pogreške, ispravak mora dati i smislen rezultat.
 
 Ovaj program namjerno sadrži pogrešku:
 
@@ -1996,7 +1990,7 @@ print(ukupno)
 5. Napravite jednu izmjenu pa ponovno pokrenite program
 6. Nakon ispravka provjerite i granične primjere, a ne samo početni unos.
 
-Ako zapnete tijekom samostalnog rada, javite se nastavniku putem Google Chata ili e-maila. Priložite datoteku s kodom, cijelu poruku pogreške i kratak opis očekivanog rezultata kako bi se problem mogao ponoviti i objasniti.
+Ako zapnete tijekom samostalnog rada, javite se putem Google Chata ili e-maila. Priložite datoteku s kodom, cijelu poruku pogreške i kratak opis očekivanog rezultata kako bi se problem mogao ponoviti i objasniti.
 
 ::: {.callout-note title="Zadatak"}
 Sljedeći program se izvršava bez poruke pogreške, ali ne daje očekivani ukupni iznos. Što program ispisuje, zašto je rezultat pogrešan i kako biste ga ispravili?
@@ -2065,78 +2059,53 @@ Ovaj pregled objedinjuje sve funkcije i metode korištene u skripti. Funkcije su
 
 # Samostalni zadaci
 
-Svaki zadatak spremite u zasebnu `.py` datoteku, primjerice `zadatak_01.py`. U programima koristite opisna imena varijabli, a rezultate ispišite s jasnim oznakama. Svaki program mora raditi samostalno nakon novog pokretanja. Rješenja se nalaze u sljedećem poglavlju; pokušajte prvo sami odabrati odgovarajuće operacije i postupke.
+Svaki zadatak spremite u zasebnu `.py` datoteku, primjerice `zadatak_01.py`. U programima koristite opisna imena varijabli, a rezultate ispišite s jasnim oznakama. Svaki program mora raditi samostalno nakon novog pokretanja. Rješenja se nalaze u sljedećem poglavlju.
 
-## Zadatak 1 - Podaci o radionici
+## Zadatak 1
 
-1. Zapišite naziv radionice `Obrada podataka`, broj prijavljenih 18, trajanje 1.5 sati i podatak da su prijave otvorene
-2. Odaberite prikladan tip za svaki podatak
-3. Ispišite sve vrijednosti i njihove tipove.
+Za radionicu naziva `Obrada podataka` prijavljeno je 18 polaznika, predviđeno trajanje iznosi 1.5 sati, a prijave su još uvijek otvorene. Svaki podatak spremite u zasebnu varijablu i odaberite tip koji odgovara njegovu značenju. Program na kraju treba ispisati svaku spremljenu vrijednost i njezin tip kako biste mogli provjeriti svoj odabir.
 
-## Zadatak 2 - Dvije grupe
+## Zadatak 2
 
-1. Prva grupa ima 14, a druga 17 studenata; izračunajte ukupan broj
-2. Prvoj grupi pridružuju se još dva studenta; ažurirajte podatak i ponovno izračunajte ukupan broj
-3. Ispišite početni i novi ukupan broj tako da se oba rezultata mogu provjeriti.
+Na početku prva grupa ima 14, a druga 17 studenata. Spremite broj studenata svake grupe u zasebnu varijablu i izračunajte početni ukupan broj studenata. Nakon toga prvoj se grupi pridružuju još dva studenta, pa ažurirajte njezin broj i ponovno izračunajte ukupan broj. Ispišite i početni i novi rezultat kako bi se jasno vidjela posljedica promjene.
 
-## Zadatak 3 - Rezultati provjera
+## Zadatak 3
 
-1. Student je na trima provjerama ostvario 65, 80 i 92 boda
-2. Izračunajte zbroj i aritmetičku sredinu bodova
-3. Prosjek prikažite na dvije decimale.
+Student je na tri provjere znanja ostvario 65, 80 i 92 boda. Svaki rezultat spremite zasebno, a zatim izračunajte ukupan broj bodova i njihov prosjek. Program treba ispisati oba rezultata, pri čemu prosjek treba biti prikazan s dvije decimale.
 
-## Zadatak 4 - Trajanje aktivnosti
+## Zadatak 4
 
-1. Aktivnost traje 367 sekundi
-2. Prikažite trajanje kao broj potpunih minuta i preostalih sekundi
-3. Ispišite rezultat u jednoj čitljivoj poruci.
+Trajanje aktivnosti zabilježeno je kao 367 sekundi. Pretvorite taj podatak u broj punih minuta i broj sekundi koje preostanu. Rezultat ispišite u jednoj razumljivoj poruci koja zasebno navodi minute i sekunde.
 
-## Zadatak 5 - Nabava materijala
+## Zadatak 5
 
-1. Potrebno je kupiti 8 komada materijala po cijeni 3.75 eura
-2. Na ukupan iznos odobrava se popust od 15 %
-3. Izračunajte početni iznos, iznos popusta i iznos nakon popusta
-4. Sva tri iznosa prikažite na dvije decimale.
+Za radionicu je potrebno kupiti osam komada materijala, a jedinična cijena jednog komada iznosi 3.75 eura. Na ukupan iznos kupnje odobrava se popust od 15 %. Izračunajte cijenu prije popusta, iznos odobrenog popusta i konačan iznos za plaćanje. Sva tri novčana iznosa ispišite s dvije decimale i jasnom oznakom što predstavljaju.
 
-## Zadatak 6 - Unos cijene i količine
+## Zadatak 6
 
-1. Omogućite korisniku unos naziva proizvoda, jedinične cijene i količine
-2. Izračunajte ukupnu vrijednost i ispišite je uz naziv proizvoda na dvije decimale
-3. Program provjerite s proizvodom `Bilježnica`, cijenom 2.40 i količinom 5; pretpostavite ispravan unos.
+Napišite program koji od korisnika traži unos naziva proizvoda, njegove jedinične cijene i željene količine. Na temelju unesenih podataka izračunajte ukupnu vrijednost kupnje te je ispišite uz naziv proizvoda, prikazanu s dvije decimale. Pretpostavite da korisnik unosi ispravne vrijednosti, a program provjerite unosom proizvoda `Bilježnica`, jedinične cijene 2.40 eura i količine 5.
 
-## Zadatak 7 - Ujednačavanje oznake
+## Zadatak 7
 
-1. Početna oznaka je `"  grupa b  "`
-2. Pripremite oznaku bez rubnih razmaka, velikim slovima i s crticom umjesto razmaka između riječi
-3. Ispišite izvornu i obrađenu oznaku tako da su vidljive njihove granice.
+Oznaka grupe zapisana je kao `"  grupa b  "`, s nepotrebnim razmacima na rubovima i neujednačenim oblikom zapisa. Izradite novu vrijednost bez rubnih razmaka, sa svim slovima pretvorenima u velika i s crticom između riječi, tako da konačna oznaka glasi `"GRUPA-B"`. Ispišite izvornu i obrađenu vrijednost unutar uglatih zagrada kako bi njihove granice i razmaci bili jasno vidljivi.
 
-## Zadatak 8 - Dijelovi identifikatora
+## Zadatak 8
 
-1. Identifikator je `"OPZ-2026-042"`
-2. Izdvojite oznaku kolegija, godinu i završnu troznamenkastu oznaku u zasebne varijable
-3. Ispišite sva tri dijela; završna oznaka treba zadržati početnu nulu.
+Identifikator `"OPZ-2026-042"` sastoji se od oznake kolegija, godine i završne troznamenkaste oznake. Izdvojite svaki od tih dijelova u zasebnu varijablu i zatim ih pojedinačno ispišite. Završni dio treba ostati tekstualna vrijednost `"042"` kako bi početna nula bila sačuvana.
 
-## Zadatak 9 - Tekstualna cijena
+## Zadatak 9
 
-1. Izvorni podatak glasi `" 7,80 EUR "`
-2. Pripremite brojčanu cijenu i izračunajte vrijednost triju proizvoda
-3. Ispišite izvorni podatak, brojčanu cijenu, tip obrađene cijene i ukupni iznos na dvije decimale.
+Jedinična cijena jednog proizvoda zapisana je kao tekst `" 7,80 EUR "`. Pripremite taj zapis za računanje i pretvorite ga u odgovarajuću brojčanu vrijednost. Zatim izračunajte ukupan iznos za tri proizvoda s tom jediničnom cijenom. Program treba ispisati izvorni zapis, dobivenu brojčanu cijenu, njezin tip i ukupan iznos prikazan s dvije decimale.
 
-## Zadatak 10 - Provjere datoteke
+## Zadatak 10
 
-1. Naziv datoteke je `"  Rezultati_2026.CSV  "`
-2. Pripremite zapis bez rubnih razmaka i neovisan o početnoj veličini slova
-3. Zasebno provjerite završava li naziv s `.csv`, sadrži li `2026` i počinje li s `rezultati`
-4. Ispišite uređeni naziv i sva tri logička rezultata.
+Naziv datoteke zapisan je kao `"  Rezultati_2026.CSV  "`. Pripremite novu vrijednost bez rubnih razmaka i u obliku koji omogućuje provjere neovisne o početnoj veličini slova. Zasebno provjerite završava li uređeni naziv nastavkom `.csv`, sadrži li tekst `2026` i započinje li tekstom `rezultati`. Ispišite uređeni naziv datoteke i rezultat svake od triju provjera.
 
-## Zadatak 11 - Uvjeti sudjelovanja
+## Zadatak 11
 
-1. Student ima 58 bodova, 4 dolaska i predan rad
-2. Prva provjera treba pokazati ima li najmanje 60 bodova i najmanje 3 dolaska
-3. Druga provjera treba pokazati treba li dodatnu provjeru zato što ima manje od 3 dolaska ili nije predao rad
-4. Ispišite oba rezultata zasebno, bez zamjenjivanja prethodnog rezultata novim.
+Student je ostvario 58 bodova, zabilježena su mu četiri dolaska i predao je rad. Izračunajte prvi logički rezultat koji pokazuje ima li student istodobno najmanje 60 bodova i najmanje tri dolaska. Zatim izračunajte drugi rezultat koji pokazuje je li potrebna dodatna provjera zato što student ima manje od tri dolaska ili nije predao rad. Oba rezultata spremite zasebno i ispišite ih tako da jedan izračun ne zamijeni drugi.
 
-## Zadatak 12 - Pronađite pogreške
+## Zadatak 12
 
 Program treba izračunati prosjek dvaju rezultata te ispisati uređeni naziv grada. Popravite pogreške tako da ispis sadrži prosjek 75.0 i grad Pula bez rubnih razmaka.
 
@@ -2150,8 +2119,7 @@ print(Prosjek)
 print("[" + grad + "]")
 ```
 
-1. Ispravite program i spremite ga
-2. Komentarima objasnite zašto su bile potrebne pojedine izmjene.
+Ispravite program i spremite funkcionalnu verziju u svoju datoteku. Uz izmijenjene retke dodajte komentare kojima ćete objasniti zašto je svaka promjena bila potrebna, a zatim provjerite daje li program traženi prosjek i pravilno uređeni naziv grada.
 
 # Rješenja samostalnih zadataka
 
