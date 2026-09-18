@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="title desc">
+<title id="title">Broj posudbi po danima</title><desc id="desc">Izmišljeni podaci: ponedjeljak 12, utorak 18, srijeda 15, četvrtak 24, petak 21. Os počinje od nule.</desc>
+<rect width="720" height="340" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#263747" font-size="16">
+<text x="20" y="28" font-size="21" font-weight="bold">Broj posudbi po danima</text>
+<g stroke="#e0e5e9"><path d="M150 55V280M270 55V280M390 55V280M510 55V280M630 55V280"/></g>
+<g fill="#287a91"><rect x="150" y="65" width="240" height="28"/><rect x="150" y="107" width="360" height="28"/><rect x="150" y="149" width="300" height="28"/><rect x="150" y="191" width="480" height="28"/><rect x="150" y="233" width="420" height="28"/></g>
+<text x="20" y="85">Ponedjeljak</text><text x="20" y="127">Utorak</text><text x="20" y="169">Srijeda</text><text x="20" y="211">Četvrtak</text><text x="20" y="253">Petak</text>
+<text x="400" y="85">12</text><text x="520" y="127">18</text><text x="460" y="169">15</text><text x="640" y="211">24</text><text x="580" y="253">21</text>
+<g text-anchor="middle"><text x="150" y="300">0</text><text x="270" y="300">6</text><text x="390" y="300">12</text><text x="510" y="300">18</text><text x="630" y="300">24</text><text x="390" y="330">Broj posudbi</text></g>
+</g></svg>

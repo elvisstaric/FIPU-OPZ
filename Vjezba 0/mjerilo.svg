@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+<title id="title">Prikazi A i B</title><desc id="desc">Dva stupčasta grafikona broja posudbi s kategorijama Prije i Poslije, bez brojčanih oznaka na stupcima. U prikazu A drugi je stupac malo viši od prvoga, a u prikazu B triput viši. Oznake osi A su 0, 10, 20, 30, 40 i 50; oznake osi B su 38, 40, 42, 44 i 46.</desc>
+<rect width="760" height="300" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#263747" font-size="15">
+<text x="20" y="30" font-size="19" font-weight="bold">Prikaz A</text><text x="410" y="30" font-size="19" font-weight="bold">Prikaz B</text>
+<g stroke="#e0e5e9"><path d="M50 60H350M50 94H350M50 128H350M50 162H350M50 196H350M50 230H350M440 60H730M440 102.5H730M440 145H730M440 187.5H730M440 230H730"/></g>
+<g text-anchor="end"><text x="42" y="235">0</text><text x="42" y="201">10</text><text x="42" y="167">20</text><text x="42" y="133">30</text><text x="42" y="99">40</text><text x="42" y="65">50</text><text x="432" y="235">38</text><text x="432" y="192.5">40</text><text x="432" y="150">42</text><text x="432" y="107.5">44</text><text x="432" y="65">46</text></g>
+<g fill="#287a91"><rect x="105" y="94" width="70" height="136"/><rect x="235" y="80.4" width="70" height="149.6"/></g>
+<g fill="#b76531"><rect x="480" y="187.5" width="70" height="42.5"/><rect x="610" y="102.5" width="70" height="127.5"/></g>
+<g text-anchor="middle"><text x="140" y="254">Prije</text><text x="270" y="254">Poslije</text><text x="515" y="254">Prije</text><text x="645" y="254">Poslije</text><text x="200" y="286">Broj posudbi</text><text x="585" y="286">Broj posudbi</text></g>
+</g></svg>

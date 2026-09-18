@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="title"><title id="title">Odabrani mjeseci i cijelo promatrano razdoblje</title><rect width="800" height="340" fill="white"/><g font-family="Arial, sans-serif" fill="#263747" font-size="15">
+<text x="24" y="28" font-size="19" font-weight="bold">„Broj posudbi stalno raste!”</text><text x="430" y="28" font-size="19" font-weight="bold">Cijelo promatrano razdoblje</text>
+<text x="24" y="55">Broj posudbi</text><text x="430" y="55">Broj posudbi</text>
+<g stroke="#e0e5e9"><path d="M60 80H365M60 130H365M60 180H365M60 230H365M60 280H365M460 80H775M460 130H775M460 180H775M460 230H775M460 280H775"/></g>
+<g text-anchor="end"><text x="50" y="285">0</text><text x="50" y="235">30</text><text x="50" y="185">60</text><text x="50" y="135">90</text><text x="50" y="85">120</text><text x="450" y="285">0</text><text x="450" y="235">30</text><text x="450" y="185">60</text><text x="450" y="135">90</text><text x="450" y="85">120</text></g>
+<path d="M80 146.667L215 130L350 113.333" fill="none" stroke="#b76531" stroke-width="4"/><path d="M480 80L550 113.333L620 146.667L690 130L760 113.333" fill="none" stroke="#287a91" stroke-width="4"/>
+<g fill="#b76531"><circle cx="80" cy="146.667" r="5"/><circle cx="215" cy="130" r="5"/><circle cx="350" cy="113.333" r="5"/></g>
+<g fill="#287a91"><circle cx="480" cy="80" r="5"/><circle cx="550" cy="113.333" r="5"/><circle cx="620" cy="146.667" r="5"/><circle cx="690" cy="130" r="5"/><circle cx="760" cy="113.333" r="5"/></g>
+<g text-anchor="middle"><text x="80" y="135">80</text><text x="215" y="118">90</text><text x="350" y="101">100</text><text x="480" y="68">120</text><text x="550" y="101">100</text><text x="620" y="135">80</text><text x="690" y="118">90</text><text x="760" y="101">100</text>
+<text x="80" y="304">Ožu</text><text x="215" y="304">Tra</text><text x="350" y="304">Svi</text><text x="480" y="304">Sij</text><text x="550" y="304">Velj</text><text x="620" y="304">Ožu</text><text x="690" y="304">Tra</text><text x="760" y="304">Svi</text></g>
+<text x="400" y="333" text-anchor="middle" font-size="13">Izmišljeni mjesečni podaci iste knjižnice; jednako mjerilo brojčane osi.</text></g></svg>
