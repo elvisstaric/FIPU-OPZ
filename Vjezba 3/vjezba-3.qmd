@@ -22,6 +22,36 @@ editor:
 ---
 
 <style>
+.quarto-title-block { display: none; }
+.cover-page {
+  width: min(1100px, 100%);
+  min-height: min(1120px, calc(100vh - 3rem));
+  margin: 0 auto 4rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.cover-banner { display: block; width: 100%; height: auto; }
+.cover-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2rem, 6vw, 4.5rem);
+  text-align: center;
+}
+.cover-logo { width: min(520px, 85%); height: auto; margin-bottom: auto; }
+.cover-title { margin: 3rem 0 .5rem; color: #071b50; font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; line-height: 1; }
+.cover-subtitle { margin: 0; color: #287a91; font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 600; line-height: 1.25; }
+.cover-people {
+  width: min(560px, 100%);
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 2px solid #66c7ee;
+  text-align: left;
+}
+.cover-people p { margin: .35rem 0; }
 #TOC a { color: inherit; text-decoration: none; }
 #TOC > ul > li > a { font-weight: 600; }
 #TOC li { margin-bottom: .3rem; }
@@ -45,6 +75,23 @@ summary:focus-visible { outline: 2px solid #287a91; outline-offset: 4px; }
   body { font-size: 10.5pt; line-height: 1.45; }
   #quarto-content { display: block !important; }
   main { width: 100% !important; max-width: none !important; }
+  .cover-page {
+    width: 100%;
+    max-width: none;
+    height: 245mm;
+    min-height: 0;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: page;
+    page-break-after: always;
+  }
+  .cover-content { padding: 14mm 12mm 10mm; }
+  .cover-logo { width: 125mm; }
+  .cover-title { break-before: auto !important; margin-top: 18mm; font-size: 34pt; }
+  .cover-subtitle { font-size: 20pt; }
   h1 { break-before: page; margin-top: 0; }
   h2, h3 { break-after: avoid; }
   pre, figure, tr { break-inside: avoid; }
@@ -53,6 +100,27 @@ summary:focus-visible { outline: 2px solid #287a91; outline-offset: 4px; }
   a { color: inherit; text-decoration: none; }
 }
 </style>
+
+<div class="cover-page">
+<img class="cover-banner" src="../../banner.jpeg" alt="Osnove podatkovne znanosti">
+<div class="cover-content">
+<img class="cover-logo" src="../../fipu_hr.png" alt="Fakultet informatike u Puli">
+<div class="cover-title">Vježba 3</div>
+<div class="cover-subtitle">Grananja i petlje u Pythonu</div>
+<div class="cover-people">
+<p><strong>Profesor:</strong> doc. dr. sc. Ivan Lorencin</p>
+<p><strong>Asistent:</strong> Elvis Starić, mag. inf.</p>
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const naslovnica = document.querySelector(".cover-page");
+  const sadrzaj = document.getElementById("TOC");
+  if (naslovnica && sadrzaj) sadrzaj.before(naslovnica);
+});
+</script>
 
 U prethodnoj vježbi zapisivali smo podatke u varijable, računali, obrađivali tekst i provjeravali uvjete. Programi su se uglavnom izvršavali redom, od prve prema posljednjoj naredbi. Sada ćemo zapisivati postupke u kojima se pojedine naredbe izvršavaju samo u određenim okolnostima ili se isti blok naredbi ponavlja više puta.
 
