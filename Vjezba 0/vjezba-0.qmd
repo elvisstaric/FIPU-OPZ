@@ -105,8 +105,8 @@ summary:focus-visible { outline: 2px solid #287a91; outline-offset: 4px; }
 <div class="cover-title">Vježba 0</div>
 <div class="cover-subtitle">Uvod u rad s podacima</div>
 <div class="cover-people">
-<p><strong>Profesor:</strong> doc. dr. sc. Ivan Lorencin</p>
-<p><strong>Asistent:</strong> Elvis Starić, mag. inf.</p>
+<p><strong>Predavanja:</strong> doc. dr. sc. Ivan Lorencin</p>
+<p><strong>Vježbe:</strong> Elvis Starić mag. inf.</p>
 </div>
 </div>
 </div>
