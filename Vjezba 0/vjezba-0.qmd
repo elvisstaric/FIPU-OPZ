@@ -102,8 +102,10 @@ summary:focus-visible { outline: 2px solid #287a91; outline-offset: 4px; }
 <img class="cover-banner" src="../../banner.jpeg" alt="Osnove podatkovne znanosti">
 <div class="cover-content">
 <img class="cover-logo" src="../../fipu_hr.png" alt="Fakultet informatike u Puli">
-<div class="cover-title">Vježba 0</div>
-<div class="cover-subtitle">Uvod u rad s podacima</div>
+<div class="cover-title">Uvodna vježba</div>
+<div class="cover-subtitle">Uvod u rad s podacima
+
+i priprema okruženja</div>
 <div class="cover-people">
 <p><strong>Predavanja:</strong> doc. dr. sc. Ivan Lorencin</p>
 <p><strong>Vježbe:</strong> Elvis Starić mag. inf.</p>
@@ -412,7 +414,7 @@ Pripremit ćemo:
 
 **Jupyter ćemo koristiti tek na kasnijim vježbama.** Sada instaliramo njegovu ekstenziju, a sve današnje programe pišemo u datotekama `.py`. Nije potrebno otvarati bilježnice ni postavljati kernel. Dodatne pakete potrebne za izvršavanje bilježnica pripremit ćemo kada ih počnemo koristiti.
 
-Za početak ne trebate instalirati Anacondu ni druge Python distribucije. Ako su alati već instalirani, prvo provjerite rade li prema uputama u nastavku. Na fakultetskom računalu bez prava instalacije koristite pripremljeno okruženje uz pomoć nastavnika.
+Za početak ne trebate instalirati Anacondu ni druge Python distribucije.
 
 ## Instalacija Pythona na Windowsu
 
@@ -437,10 +439,10 @@ Treba se pojaviti ispis poput `Python 3.x.y`, pri čemu su `x` i `y` stvarni bro
 
 Klasični instalacijski program `.exe` može nuditi **Add python.exe to PATH**. Ako koristite taj način instalacije, označite opciju prije nastavka. PATH je popis lokacija na kojima sustav traži programe kada upišete njihovo ime u terminal.
 
-Python Install Manager koristi drukčiji postupak, pa u njemu ne trebate tražiti isti potvrdni okvir. Naredba `py install default` pripada novom upravitelju; stariji `py` pokretač je ne podržava. Ako vaš Python već radi, ne morate ga ponovno instalirati.
+Python Install Manager koristi drukčiji postupak, pa u njemu ne trebate tražiti isti potvrdni okvir. Naredba `py install default` pripada novom upravitelju, stariji `py` pokretač je ne podržava. Ako vaš Python već radi, ne morate ga ponovno instalirati.
 :::
 
-Ako `python --version` ne radi, zatvorite i ponovno otvorite PowerShell pa pokušajte ponovo. Možete provjeriti i `py --version`. Više mogućih naredbi ne znači da ih sve morate koristiti; potrebno je utvrditi koja pokreće vašu instalaciju.
+Ako `python --version` ne radi, zatvorite i ponovno otvorite PowerShell pa pokušajte ponovo. Možete provjeriti i `py --version`. Više mogućih naredbi ne znači da ih sve morate koristiti, potrebno je utvrditi koja pokreće vašu instalaciju.
 
 Postupak je prema [službenim uputama za Windows](https://docs.python.org/3/using/windows.html).
 
@@ -485,7 +487,7 @@ Zatim na isti način pronađite **Jupyter** izdavača **Microsoft**, identifikat
 ::: {.callout-note}
 ## Jupyter zasad samo instaliramo
 
-Jupyter omogućuje rad s bilježnicama koje povezuju tekst, kod i rezultate. Kako se bilježnice stvaraju i koriste obradit ćemo kasnije. Za današnji rad dovoljno je da je ekstenzija instalirana; sve daljnje korake radimo u običnim Python datotekama.
+Jupyter omogućuje rad s bilježnicama koje povezuju tekst, kod i rezultate. Kako se bilježnice stvaraju i koriste obradit ćemo kasnije. Za današnji rad dovoljno je da je ekstenzija instalirana, sve daljnje korake radimo u običnim Python datotekama.
 :::
 
 ## Napravite mapu za svoje datoteke
@@ -516,7 +518,7 @@ Pokrenite pronađenu naredbu i odaberite Python koji ste instalirali. Prikaz mo�
 **Interpreter** je program koji izvršava upute napisane u programskom jeziku. Odabirom Python interpretera u VS Codeu određujemo koju će instalaciju Pythona VS Code koristiti za pokretanje naših `.py` datoteka.
 :::
 
-Ovaj korak posebno je važan ako računalo ima više instalacija Pythona. Samo postojanje koda u uređivaču ne određuje koji ga program izvršava. Ako niste sigurni koju instalaciju odabrati, usporedite verziju s provjerom iz terminala i uz pomoć nastavnika provjerite putanju.
+Ovaj korak posebno je važan ako računalo ima više instalacija Pythona. Samo postojanje koda u uređivaču ne određuje koji ga program izvršava. Ako niste sigurni koju instalaciju odabrati, usporedite verziju s provjerom iz terminala.
 
 # Provjera Python okruženja
 
@@ -606,12 +608,11 @@ Ako nakon ovih provjera program i dalje ne radi, javite se putem Google Chata il
 
 # Zadaci za samostalnu vježbu
 
-Najprije odgovorite na teorijska pitanja vlastitim riječima. Nakon toga riješite tri kratka Python zadatka kako biste provjerili možete li samostalno napraviti, spremiti i pokrenuti datoteku. Rješenja se nalaze na kraju skripte.
 
 ::: {.callout-note}
 ## Napomena o zadacima
 
-Budući da je ovo uvodna vježba, dio zadataka provjerava razumijevanje osnovnih teorijskih pojmova. U sljedećim vježbama zadaci će biti praktični i rješavat će se korištenjem alata i postupaka obrađenih na nastavi.
+Budući da je ovo uvodna vježba, dio zadataka provjerava razumijevanje osnovnih teorijskih pojmova. U sljedećim vježbama zadaci će biti praktični i rješavat će se korištenjem alata i postupaka obrađenih na nastavi. Rješenja se nalaze u sljedeće poglavlju.
 :::
 
 ## Teorijska pitanja
@@ -622,7 +623,7 @@ Budući da je ovo uvodna vježba, dio zadataka provjerava razumijevanje osnovnih
 4. Što je manipulacija podacima? Objasnite kako grafikon može stvoriti zavaravajući dojam iako su brojevi prikazani na njemu točni.
 5. Navedite i objasnite dva načina manipulacije prikazom podataka. Za svaki navedite što bi trebalo promijeniti kako bi prikaz bio pošteniji i jasniji.
 
-## Python zadatak 1 - Predstavite se
+## Zadatak 1
 
 Napravite datoteku `predstavljanje.py`. Koristeći tri naredbe `print()`, ispišite svoje ime, mjesto iz kojeg dolazite i jednu stvar koju očekujete naučiti na kolegiju.
 
@@ -636,7 +637,7 @@ Ocekivanje: nauciti analizirati podatke
 
 Upišite vlastite podatke, spremite datoteku i pokrenite je.
 
-## Python zadatak 2 - Obavijest za vježbe
+## Zadatak 2
 
 Napravite datoteku `obavijest.py` koja ispisuje sljedeću obavijest u četiri retka:
 
@@ -649,7 +650,7 @@ Mozemo zapoceti s radom!
 
 Za svaki redak koristite zasebnu naredbu `print()`. Prije pokretanja provjerite imate li na svakom retku oba navodnika i obje zagrade.
 
-## Python zadatak 3 - Pronađite i ispravite pogreške
+## Zadatak 3
 
 Sljedeći program sadrži nekoliko pogrešaka. Prepišite ga u datoteku `ispravak.py`, pokrenite i pogledajte poruku u terminalu.
 
@@ -706,7 +707,7 @@ Moguća su različita rješenja. Primjerice:
 
 Dovoljna su bilo koja dva primjera uz jasno objašnjenje problema i ispravka.
 
-## Rješenje Python zadatka 1
+## Rješenje Zadatka 1
 
 Jedno moguće rješenje:
 
@@ -729,7 +730,7 @@ Ocekivanje: nauciti analizirati podatke
 
 Vaš će se sadržaj razlikovati jer trebate upisati vlastite podatke. Važno je da program ima tri naredbe i da se svaka poruka ispiše u zasebnom retku.
 
-## Rješenje Python zadatka 2
+## Rješenje Zadatka 2
 
 ~~~python
 print("Osnove podatkovne znanosti")
@@ -750,7 +751,7 @@ Mozemo zapoceti s radom!
 
 </details>
 
-## Rješenje Python zadatka 3
+## Rješenje Zadatka 3
 
 ~~~python
 print("Provjera okruzenja")
